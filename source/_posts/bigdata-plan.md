@@ -5,4 +5,4 @@ tags: [bigdata]
 ---
 
 ## 参考架构图
-{% asset_img ./bigdata-plan/bigdata.png This is an example image %}
+![bigdata-plan](bigdata-plan/bigdata.png)
