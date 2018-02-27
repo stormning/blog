@@ -1,11 +1,14 @@
 ---
 title: 当hexo牵手github，转角遇上docker
+date: "2018/02/26 17:25"
+tags: [容器]
 ---
+
 # slyak/hexo
 
 ## Architecture
 
-<img src="./assets/hexo.png" width="450">
+{% asset_img hexo.png %}
 
 1. Initialze your blog by cloning your github repository at the first time.
 2. If the cloned repository is empty , we will use `hexo init` to init your bolg.
@@ -21,13 +24,13 @@ That's all , all these things will be automatically done by this amazing docker 
 
 ### logic architecture:
 
-<img src="./assets/hexo-module.png" width="600">
+{% asset_img hexo-module.png %}
 
 ## Run hex server
 ### Preparations
 1. If you already have a blog based on hexo, that's ok ,use it . Otherwise create a repository at github, remember , keep your repository empty.
 2. Add webhook with payload url(your server ip with port 4001) and secret, select content type "application/json" 
-<img src="./assets/webhook.png" width="450">
+{% asset_img webhook.png %}
 
 ### Use nginx as web server
 nginx config, replace the command with your domain or ip
@@ -62,11 +65,11 @@ docker logs -f hexo
 
 you will see:
 
-<img src="./assets/rsa_key.png" width="450">
+{% asset_img rsa_key.png %}
 
 copy the key to github , do not forget to click "Allow write access", hexo server will continue to start.
 
-<img src="./assets/rsa.png" width="450">
+{% asset_img rsa.png %}
 
 ### Environments and ports explanation
 
