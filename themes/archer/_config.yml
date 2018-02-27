@@ -34,11 +34,11 @@ about:
 
 # ========== Site ========== #
 # title of the site
-SEO_title: fi3ework's Studio
+SEO_title: stormning's Yard
 # main title
-main_title: fi3ework's Studio.
+main_title: stormning's Yard.
 # subtitle
-subtitle: it's better to burn out than to fade away
+subtitle: working and dancing
 # site haeder image
 site_header_image: '/intro/index-bg.jpg'
 # post haeder image
@@ -69,7 +69,7 @@ comment:
 # Busuanzi pv analytics
 busuanzi: true
 # Baidu analytics
-baidu_analytics: 
+baidu_analytics: 43d054fc26181f838e90e9e187c4fe43
 # Google analytics
 google_analytics: 
 # CNZZ analytics
