@@ -9,7 +9,7 @@ tags: [容器]
 
 突然发现hexo是不错的选择，可以用markdown写作，而且代码可以托管到github。随便扫描了一眼安装过程，嗯，太麻烦，万一虚拟机挂了岂不是还要重新这个痛苦过程？我的虚拟机咋这么脆弱：），想起了docker的write once use anywhere 理念，遂打算将其docker化。捣鼓了两天终成正果：
 
-[github地址](https://github.com/stormning/env-tool-suite/tree/master/software/hexo)
+[戳我访问github地址](https://github.com/stormning/env-tool-suite/tree/master/software/hexo)
 
 ## 架构
 
