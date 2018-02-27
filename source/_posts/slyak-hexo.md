@@ -31,14 +31,14 @@ tags: [容器]
 
 {% asset_img hexo-module.png %}
 
-## Run hex server
-### Preparations
+## 安装和运行步骤
+### 准备工作
 1. 如果你已经有基于hexo的博客，直接用它的博客地址就OK了，否则需要创建一个空的博客（记住，什么都不要有，包括README）.
 2. 添加webhook，包括payload url(服务器ip和端口号4001)和secret, 选择content type "application/json" 
 {% asset_img webhook.png %}
 
 ### 使用nginx作为你的web服务器
-nginx config, replace the command with your domain or ip
+nginx的配置文件，请将命令行中的“your\_domain\_or\_ip”，替换成你的域名或ip
 ``` bash
 curl -Ls https://raw.githubusercontent.com/stormning/env-tool-suite/master/software/hexo/hexo.conf \
     | sed "s|slyak.com|your_domain_or_ip|g" > /etc/nginx/conf.d/hexo.conf
