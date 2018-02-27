@@ -5,4 +5,4 @@ tags: [bigdata]
 ---
 
 ## 参考架构图
-![](/bigdata.jpg)
+{% asset_img bigdata.jpg %}
