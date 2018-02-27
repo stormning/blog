@@ -1,7 +1,8 @@
 ---
 title: 大数据仓库研究计划
 date: "2018/02/26 17:25"
-tags: [bigdata]
+tags: [大数据]
+categories: [大数据仓库]
 ---
 
 ## 参考架构图
