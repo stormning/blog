@@ -6,33 +6,33 @@ tags: [容器]
 
 # slyak/hexo
 
-## Architecture
+## 架构
 
 {% asset_img hexo.png %}
 
-1. Initialze your blog by cloning your github repository at the first time.
-2. If the cloned repository is empty , we will use `hexo init` to init your bolg.
-3. Push default hexo resources to your github repository.
-4. Generate static web resources using command `hexo generate`.
-5. We write some posts and push them to github.
-6. Github notify the hexo server with the changes using webhook.
-7. Webhook server receive event and reset repository and pull the latest sources from github .
-8. Generate static web resources using command `hexo generate`.
-9. We can see the changes without any delay.
+1. 通过clone你的github站点进行初始化.
+2. 如果clone结果为空 , 我们会使用`hexo init`来进行默认的初始化.
+3. 推送初始化结果到你到github仓库.
+4. 使用`hexo generate`生成静态文件.
+5. 我们提交一些修改（比如换皮肤、写博客）到github.
+6. Github利用webhook进行通知.
+7. Webhook服务器接收到事件，从服务器拉取最新的修改.
+8. 使用`hexo generate`生成静态文件.
+9. 通过浏览器我们可以立刻看到修改结果.
 
-That's all , all these things will be automatically done by this amazing docker image.
+综上，所有事情都会通过这个神奇的docker镜像，自动化完成。
 
-### logic architecture:
+### 逻辑架构
 
 {% asset_img hexo-module.png %}
 
 ## Run hex server
 ### Preparations
-1. If you already have a blog based on hexo, that's ok ,use it . Otherwise create a repository at github, remember , keep your repository empty.
-2. Add webhook with payload url(your server ip with port 4001) and secret, select content type "application/json" 
+1. 如果你已经有基于hexo的博客，直接用它的博客地址就OK了，否则需要创建一个空的博客（记住，什么都不要有，包括README）.
+2. 添加webhook，包括payload url(服务器ip和端口号4001)和secret, 选择content type "application/json" 
 {% asset_img webhook.png %}
 
-### Use nginx as web server
+### 使用nginx作为你的web服务器
 nginx config, replace the command with your domain or ip
 ``` bash
 curl -Ls https://raw.githubusercontent.com/stormning/env-tool-suite/master/software/hexo/hexo.conf \
@@ -48,7 +48,7 @@ docker run -idt -p 4001:4001 --name hexo \
     slyak/hexo
 ```
 
-### Or Use hexo default server
+### 或者用hexo自带的web服务器
 ``` bash
 docker run -idt -p 4000:4000 -p 4001:4001 --name hexo \
     -e GIT_URL=your_blog_ssh_url \
@@ -58,37 +58,37 @@ docker run -idt -p 4000:4000 -p 4001:4001 --name hexo \
     slyak/hexo hexo server
 ```
 
-### Setup SSH key
+### 设置SSH key
 ``` bash
 docker logs -f hexo
 ```
 
-you will see:
+你将看到如下:
 
 {% asset_img rsa_key.png %}
 
-copy the key to github , do not forget to click "Allow write access", hexo server will continue to start.
+把key拷贝到github到设置里，不要忘了勾选"Allow write access", 这个配置完后, hexo会继续下一步的初始化工作.
 
 {% asset_img rsa.png %}
 
-### Environments and ports explanation
+### 环境变量和端口描述
 
-Docker run environments:
+Docker run 环境变量:
 
-| Environment | Description |  Required  |
+| 环境变量 | 描述 |  是否必须  |
 | --------    | :-----   | :----: |
-| GIT_URL     | SSH url for github repository |   Y    |
-| GIT_ACCOUNT | Your github account |   Y    |
-| WEB_HOOK_SECRET | Github webook secret |   Y    |
-| HEXO_HOME | Hexo home directory, default is `/var/hexo` |   N    |
+| GIT_URL     | github仓库的SSH地址，注意不是https |   Y    |
+| GIT_ACCOUNT | 你的github账号（email） |   Y    |
+| WEB_HOOK_SECRET | Github webook 密码 |   Y    |
+| HEXO_HOME | Hexo 安装路径, 默认 `/var/hexo` |   N    |
 
-Expose ports:
+端口:
 
-| Port | Description |
+| 端口号 | 描述 |
 | --------    | :----- |
-| 4000     | Hexo server port (if you use hexo's web server) |
-| 4001 | Webhook server port |
+| 4000     | Hexo web服务器的端口 (如果你使用hexo的服务器作为web服务器的话) |
+| 4001 | Webhook服务器的端口 |
 
 
-### Useful links
-1. [Hexo themes](https://hexo.io/themes/)
+### 有用的链接
+1. [Hexo皮肤](https://hexo.io/themes/)
