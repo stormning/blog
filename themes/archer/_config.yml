@@ -7,10 +7,10 @@ author: fi3ework
 signature: witness me
 # SNS
 social:
-  email: 12345@qq.com
-  github: //github.com/fi3ework
+  email: stormning@163.com
+  github: //github.com/stormning
   # wechat and qq should be a path of an qr-code image
-  wechat: /assets/example_qr.png
+  wechat: /assets/stormning_qr.png
   qq: 
   weibo: 
   zhihu: 
@@ -24,9 +24,9 @@ social:
   others: 
   rss: 
 # friends
-friends:
-  friendA: //www.baidu.com
-  friendB: //www.google.com
+#friends:
+  #friendA: //www.baidu.com
+  #friendB: //www.google.com
   # friendC:
 about:
   enable: true
