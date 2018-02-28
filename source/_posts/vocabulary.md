@@ -6,3 +6,5 @@ tags: [缩略词]
 | 缩略词 | 完整 |  解释  |
 | ------- | ------- | ----- |
 | RDBMS | Relational Database Management System | 关系数据库管理系统 |
+| OLAP  | On-Line Analytical Processing | 联机分析处理 |
+| OLTP  | On-line Transaction Processing | 联机事务处理 |
