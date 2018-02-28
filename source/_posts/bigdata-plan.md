@@ -6,4 +6,4 @@ categories: [大数据仓库]
 ---
 
 ## 参考架构图
-{% asset_img bigdata.png big data %}
+{% asset_img dwh.png big data %}
