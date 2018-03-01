@@ -103,4 +103,4 @@ jsonContent:
     tags: true
 
 sitemap:
-  path: sitemap.xml
+    path: sitemap.xml
