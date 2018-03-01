@@ -101,3 +101,6 @@ jsonContent:
     excerpt: false
     categories: true
     tags: true
+
+sitemap:
+  path: sitemap.xml
