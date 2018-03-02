@@ -58,10 +58,10 @@ comment:
   changyan_appid: 
   changyan_conf: 
   # Gitment  site: https://github.com/imsun/gitment
-  gitment_owner: 
-  gitment_repo: 
-  gitment_client_id: 
-  gitment_client_secret: 
+  gitment_owner: stormning@163.com
+  gitment_repo: https://github.com/stormning/blog
+  gitment_client_id: 58b17fdde05e43b96953
+  gitment_client_secret: 3c277ae90d18179e8928e8830b1091fea8866c22
   # Youyan  site: http://www.uyan.cc/
   youyan_uid: 
 
