@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Disallow: /scripts/
+Disallow: /static/
+Disallow: /avatar/
+Disallow: /fonts/
+Disallow: /intro/
+Sitemap: http://slyak.com/sitemap.xml
+Sitemap: http://slyak.com/baidusitemap.xml
