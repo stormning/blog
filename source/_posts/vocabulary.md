@@ -9,3 +9,5 @@ tags: [缩略词]
 | OLAP  | On-Line Analytical Processing | 联机分析处理 |
 | OLTP  | On-line Transaction Processing | 联机事务处理 |
 | Ad-hoc Queries| | 即席查询 |
+| CAP   | Consistency Availability Partition tolerance | 一致性、可用性、分区容忍性(可靠性)无法三者兼顾 |
+| ACID  | Atomicity Consistency Isolation Durability | 原子性、一致性、隔离性、持久性 |
