@@ -16,3 +16,10 @@ tags: [缩略词]
 | HDP   | Hortonworks Data Platform | Hortonworks提供的Hadoop发行版 |
 | DDL   | Data Definition Language) | 数据定义语言，如CREATE DROP ALTER |
 | DML   | Data Manipulation Language | 数据操作语言，如INSERT UPDATE DELETE SELECT |
+| POC   | Proof of Concept | 针对客户具体应用的验证性测试 |
+| DAG   | Directed acyclic graph | 有向无环图 |
+| MPP   | Massively Parallel Processing | 大规模并行处理 |
+| AMQP  | Advanced Message Queuing Protocol | 提供统一消息服务的应用层标准高级消息队列协议 |
+| JMS   | Java Message Service | Java消息服务 |
+| DSL   | Domain Specific Language | 领域专用语言 |
+| EPEL  | Extra Packages for Enterprise Linux | 基于Fedora的一个项目，为“红帽系”的操作系统提供额外的软件包 |
