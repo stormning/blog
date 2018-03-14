@@ -6,7 +6,6 @@ categories: [大数据仓库]
 ---
 
 # 大数据参考架构
-![](./bigdata-plan/dw.png)
 {% asset_img dwh.png big data %}
 
 # 大数据仓库建设
