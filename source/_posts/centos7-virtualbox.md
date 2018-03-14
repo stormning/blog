@@ -22,7 +22,7 @@ usermod -a -G vboxusers 用户名称
 
 &emsp;&emsp;但是考虑到可能其他用户也有管理虚拟主机的需求，所以采用web方式（免安装x11 server）是最正确的姿势。既然是当工具使用，当然要是最快捷的方式（什么繁琐的安装过程我不care），非docker莫属。
 
-#### 运行virtualbox自带的webserver
+#### 运行virtualbox的webserver
 
 ##### 配置vbox.cfg
 ```bash
@@ -39,9 +39,10 @@ VBOXWEB_LOGFILE=/var/log/vboxweb.log"\
 ```
 #### 运行vboxserv
 ```bash
-/usr/lib/virtualbox/vboxweb-service.sh start
+systemctl enable vboxweb-service
+systemctl start vboxweb-service
 ```
-#### 用docker运行phpvirtualbox
+#### 运行和webserver通信的phpvirtualbox
 ```bash
 docker run --name vbox_http --restart=always -p 80:80 \
     -e SRV1_PORT_18083_TCP=192.168.xx.xx:18083 -e SRV1_NAME=Server1 -e SRV1_USER=root -e SRV1_PW='123456' \
@@ -50,4 +51,5 @@ docker run --name vbox_http --restart=always -p 80:80 \
 从上面命令可以看出phpvirtualbox是可以管理多个远程的virtualbox的
 
 #### 最终效果图
+浏览器输入ip和端口号即可访问
 {% asset_img virtualbox.png phpvirtualbox %}
