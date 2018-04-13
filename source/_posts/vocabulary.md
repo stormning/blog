@@ -23,3 +23,4 @@ tags: [缩略词]
 | JMS   | Java Message Service | Java消息服务 |
 | DSL   | Domain Specific Language | 领域专用语言 |
 | EPEL  | Extra Packages for Enterprise Linux | 基于Fedora的一个项目，为“红帽系”的操作系统提供额外的软件包 |
+| ITAMS | IT Automation Management Tool/System | IT资源自动化管理工具/系统 |
