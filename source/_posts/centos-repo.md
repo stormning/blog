@@ -1,5 +1,5 @@
 ---
-title: CentOS 离线环境准备
+title: 基于centos的软件自助安装服务器
 date: 2018-04-13 14:57
 tags: [centos,离线安装,镜像]
 categories: [运维,DevOps]
