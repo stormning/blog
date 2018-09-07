@@ -48,6 +48,7 @@ docker run --name vbox_http --restart=always -p 80:80 \
     -e SRV1_PORT_18083_TCP=192.168.xx.xx:18083 -e SRV1_NAME=Server1 -e SRV1_USER=root -e SRV1_PW='123456' \
     -d jazzdd/phpvirtualbox
 ```
+注意：上面的用户名密码是你宿主机的密码。
 从上面命令可以看出phpvirtualbox是可以管理多个远程的virtualbox的
 
 #### 最终效果图
