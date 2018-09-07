@@ -51,6 +51,12 @@ docker run --name vbox_http --restart=always -p 80:80 \
 注意：上面的用户名密码是你宿主机的密码。
 从上面命令可以看出phpvirtualbox是可以管理多个远程的virtualbox的
 
+#### 运行增强包
+```bash
+wget https://download.virtualbox.org/virtualbox/5.2.16/Oracle_VM_VirtualBox_Extension_Pack-5.2.16-123759.vbox-extpack
+VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.2.16-123759.vbox-extpack 
+```
+
 #### 最终效果图
 浏览器输入ip和端口号即可访问
 {% asset_img virtualbox.png phpvirtualbox %}
