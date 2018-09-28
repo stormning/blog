@@ -17,6 +17,23 @@ yum install VirtualBox-5.2
 usermod -a -G vboxusers 用户名称
 ```
 
+#### 安装一个种子镜像（需要远程图形界面）
+安装XQuartz
+1、启动XQuartz
+2、登陆远程主机：
+ssh -X username@host
+输入密码登陆
+3、登陆后输入setenv回车，查看DISPLAY变量，对DISPLAY变量设置：
+setenv DISPLAY localhost:10.0
+4、可输入xclock，如果弹出窗口，说明可以使用远程主机的图形界面了。
+5、运行VirtualBox &
+6、退出时，先关闭图形窗口，然后命令行上输入exit退出
+
+问题：XQuartz响应太慢
+ssh -c arcfour,blowfish-cbc -XC host.com
+ssh -Y -C -o CompressionLevel=9  -c arcfour,blowfish-cbc user@hostname
+如果加密选项没有，也可以省略
+
 ### web方式管理virtualbox
 &emsp;&emsp;有时候，virtualbox所处的服务器是台没有显示器的远程主机，我们需要远程管理虚拟主机。可以[利用x11 server来远程渲染图形界面来操作主机](http://slyak.com/2018/03/13/ssh-x11-mac)，也可以安装virtualbox的图形管理界面。
 
@@ -56,6 +73,28 @@ docker run --name vbox_http --restart=always -p 80:80 \
 wget https://download.virtualbox.org/virtualbox/5.2.16/Oracle_VM_VirtualBox_Extension_Pack-5.2.16-123759.vbox-extpack
 VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.2.16-123759.vbox-extpack 
 ```
+
+#### WEB控制台（可选）
+```bash
+docker stop vbox_http
+systemctl stop vboxweb-service.service
+
+VBoxManage modifyvm 虚拟机名称 --vrdeport 3389-4000
+VBoxManage modifyvm 虚拟机名称 --vrde on
+
+systemctl start vboxweb-service.service
+docker start vbox_http
+```
+
+问题1：The machine 'xxx' is already locked for a session (or being unlocked)
+解决方法：
+```bash
+VBoxManage startvm 虚拟机名称 --type emergencystop
+```
+
+问题2：The Adobe Flash plugin is not installed.
+解决方法：换成firefox就ok了
+
 
 #### 最终效果图
 浏览器输入ip和端口号即可访问
