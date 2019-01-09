@@ -5,5 +5,7 @@ tags: [python]
 ---
 
 python
-flask
+flask blueprint
+flask_sqlalchemy
+
 ..
