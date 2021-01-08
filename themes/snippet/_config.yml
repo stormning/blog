@@ -68,19 +68,7 @@ notification: |-
 social:
  - name: Github
    icon: git
-   href: //github.com/shenliyang
- - name: 邮箱
-   icon: envelope-o
-   href: mailto:snippet@91h5.cc
- - name: 联系QQ
-   icon: qq
-   href: /
- - name: 微信
-   icon: weixin
-   href: /
- - name: QQ群
-   icon: users
-   href: /
+   href: //github.com/stormning
  - name: RSS
    icon: feed
    href: /atom.xml
