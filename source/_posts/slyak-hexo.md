@@ -2,6 +2,7 @@
 title: hexo牵手github爱上docker
 date: "2018/02/26 17:25"
 tags: [容器]
+categories: [运维]
 ---
 
 ## 前言

@@ -2,7 +2,7 @@
 title: 软件开发流程
 date: "2018/02/28 15:28"
 tags: [软件开发]
-categories: [研发流程管理]
+categories: [研发管理]
 ---
 
 ## 概述

@@ -2,7 +2,7 @@
 title: 大数据仓库研究
 date: "2018/02/26 17:25"
 tags: [大数据]
-categories: [大数据仓库]
+categories: [后端]
 ---
 
 # 大数据参考架构
