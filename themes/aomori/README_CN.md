@@ -219,10 +219,6 @@ sticky: 100
 
 更多使用方法 [点击查看](https://github.com/hexojs/hexo-generator-index)
 
-#### Video
-
-我们对文章内容里面的视频做了优化处理，你只需要在写文章的时候直接使用 HTML 的 Video 标签 `<video src="xxx"/>` 即可。
-
 ---
 
 ## 文章可选风格
@@ -351,7 +347,3 @@ Enjoy.
 # Copyright & License
 
 Copyright (c) 2020 LIN HONG - Released under the [MIT license](LICENSE).
-
-# Thanks
-
-[OMNCLOUD.COM](https://omncloud.com/store) 为我们提供了优质的 VPS 服务

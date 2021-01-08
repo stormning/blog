@@ -212,10 +212,6 @@ sticky: 100
 
 More ways to use [hexo-generator-index](https://github.com/hexojs/hexo-generator-index)
 
-#### Video
-
-We have optimized the video in the content of the article, you only need to directly use the `HTML Video Tag` like `<video src="xxx"/>` when writing the article.
-
 ---
 
 ## Article Style
@@ -340,7 +336,3 @@ Enjoy.
 # Copyright & License
 
 Copyright (c) 2020 LIN HONG - Released under the [MIT license](LICENSE).
-
-# Thanks
-
-[OMNCLOUD.COM](https://omncloud.com/store) Provides an excellent VPS service.
